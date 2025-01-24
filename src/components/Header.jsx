@@ -17,8 +17,8 @@ export const Header = () => {
   };
 
   const handleUploadClick = () => {
-    setShowCreatePostBox(!showCreatePostBox); // Toggle visibility of CreatePostBox
-    setIsOpen(false); // Close the menu
+    setShowCreatePostBox(!showCreatePostBox);
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export const Header = () => {
       <header className="header">
         <div className="container" ref={headerRef}>
           <div className="header-content">
-            <Link to="/" onClick={toggleMenu} className="logo">
+            <Link to="/" className="logo">
               ApnaDarbhanga
             </Link>
             <nav className={`nav ${isOpen ? "open" : ""}`}>
@@ -94,7 +94,10 @@ export const Header = () => {
           </div>
         </div>
       </header>
-{showCreatePostBox && <CreatePostBox className="createPostBox" />}
+      <div className="post-container">
+      {showCreatePostBox && <CreatePostBox className="createPostBox" />}
+      </div>
+
 
     </>
   );

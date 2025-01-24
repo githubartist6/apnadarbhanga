@@ -67,45 +67,19 @@ button:hover {
   z-index: 99;
 }
 
-/* CreatePostBox Styling */
-.createPostBox {
-  position: fixed;
+.post-container {
+  position: absolute;
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   max-width: 500px;
-  background: white;
+  background: none;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1001; /* Higher than the blur overlay */
+  z-index: 1001;
   padding: 20px;
   text-align: center;
 }
-
-/* Blur Overlay */
-.blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px); /* Blurs the background */
-  z-index: 1000; /* Ensure it's below the createPostBox */
-}
-
-/* Optional: Close button inside the CreatePostBox */
-.createPostBox .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
 
 .header-content {
   display: flex;
@@ -126,6 +100,8 @@ button:hover {
 .nav ul {
   display: flex;
   list-style-type: none;
+  text-align: center;
+  align-items: center;
 }
 
 .nav ul li {
@@ -154,6 +130,9 @@ button:hover {
   width: 60%;
 }
 
+.file-label {
+  margin-left: -20px;
+}
 
 .menu-button {
   display: none;
@@ -493,6 +472,10 @@ object-fit: cover;
     left: 0;
     right: 0;
     background-color: #f4501ee3;
+  }
+
+  .nav ul {
+    align-items: start;
   }
 
   .header .nav.open ul {

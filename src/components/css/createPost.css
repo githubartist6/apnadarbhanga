@@ -1,211 +1,234 @@
 /* Overall container for the create post box */
 .create-post-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fafafa;
-  }
-  
-  /* Header section */
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .header-container h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .next-button {
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .next-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Upload area */
-  .upload-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #555;
-    padding: 20px;
-    border: 2px dashed #ccc;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+/* Header section */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.post-button {
+  height: 40px;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.post-button:hover {
+  background-color: #0056b3;
+}
+
+/* Upload area */
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.upload-area span {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.upload-area .custom-file-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.upload-area .custom-file-button:hover {
+  background-color: #0056b3;
+}
+
+.upload-area .custom-file-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Hides the file input field */
+input[type="file"] {
+  display: none;
+}
+
+/* File preview area */
+.file-previews {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.file-preview {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.file-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.file-preview span {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+
+.file-preview video,
+.file-preview img {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+/* Styling for post input section */
+.post-input-section {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.post-input-section h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.post-content-input,
+.post-input-section .post-header {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 100px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.post-input-section .post-header {
+  padding: 10px;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+.post-input-section .post-header:focus {
+  border-color: #0056b3;
+}
+
+.post-content-input:focus {
+  border-color: #007bff;
+}
+
+/* Additional styling for file preview button */
+.next-button svg {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .create-post-box {
+    padding: 15px;
     max-width: 100%;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.3s ease;
   }
-  
-  .upload-area:hover {
-    border-color: #007bff;
-    background-color: #f0f8ff;
+
+  .upload-area {
+    padding: 15px;
+    max-width: 100%;
   }
-  
-  .upload-area span {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
-  }
-  
-  .upload-area .custom-file-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 15px;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .upload-area .custom-file-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .upload-area .custom-file-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
-  }
-  
-  /* Hides the file input field */
-  input[type="file"] {
-    display: none;
-  }
-  
-  /* File preview area */
-  .file-previews {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
+
   .file-preview {
     width: 100%;
-    max-width: 350px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-    border-radius: 10px;
-    overflow: hidden;
+    max-width: 100%;
+    height: auto;
   }
-  
+
   .file-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
+    height: auto;
+    max-width: 100%;
   }
-  
-  .file-preview span {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-    word-wrap: break-word;
-    margin-top: 5px;
-  }
-  
-  .file-preview video,
-  .file-preview img {
-    width: 100%;
-    max-width: 350px;
-    height: 200px;
-    border-radius: 5px;
-  }
-  
-  /* Styling for post input section */
-  .post-input-section {
-    width: 100%;
-    margin-top: 30px;
-  }
-  
-  .post-input-section h3 {
-    font-size: 18px;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-  
+
   .post-content-input {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    resize: vertical;
-    min-height: 100px;
-    outline: none;
-    transition: border 0.3s ease;
+    padding: 12px;
   }
-  
-  .post-content-input:focus {
-    border-color: #007bff;
-  }
-  
-  /* Additional styling for file preview button */
-  .next-button svg {
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .create-post-box {
-      padding: 15px;
-      max-width: 100%;
-    }
-  
-    .upload-area {
-      padding: 15px;
-      max-width: 100%;
-    }
-  
-    .file-preview {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-    }
-  
-    .file-thumbnail {
-      height: auto;
-      max-width: 100%;
-    }
-  
-    .post-content-input {
-      padding: 12px;
-    }
-  }
-  
+}
