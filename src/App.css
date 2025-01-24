@@ -454,6 +454,18 @@ object-fit: cover;
   text-align: center;
 }
 
+.search-label {
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: -40px;
+  font-size: 22px;
+}
+
+.search-label:hover {
+  background: none;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
 
@@ -483,8 +495,16 @@ object-fit: cover;
     padding: 20px;
   }
 
+  .searchComponent {
+    margin-left: 0px;
+  }
+
   .header .nav.open ul li {
     margin: 10px 0;
+  }
+
+  .search-label {
+    margin-left: 0px;
   }
 
   .header .menu-button {

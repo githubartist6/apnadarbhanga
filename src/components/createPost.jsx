@@ -62,7 +62,7 @@ export function CreatePostBox() {
 
       <div className="upload-area">         
         {!hasImageFile && <LiaPhotoVideoSolid className="upload-icon" />}
-        {!hasImageFile && <span>Drag photos and videos here</span>}
+        {!hasImageFile && <span>Drag photos here</span>}
         
         {!hasImageFile && <label htmlFor="file-upload" className="custom-file-button">
           Choose
