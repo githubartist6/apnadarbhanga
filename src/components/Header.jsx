@@ -95,7 +95,7 @@ export const Header = () => {
                     <FaPlus /> Upload
                   </button>
                 </li>
-                <li>
+                <li className="search-laptop">
                   <button
                     onClick={handleSearchClick}
                     className="file-label search-label"
@@ -105,6 +105,14 @@ export const Header = () => {
                 </li>
               </ul>
             </nav>
+            <li className="search-mobile">
+              <button
+                onClick={handleSearchClick}
+                className="file-label search-label"
+              >
+                <FaSearch />
+              </button>
+            </li>
             <button
               className="menu-button"
               onClick={toggleMenu}
